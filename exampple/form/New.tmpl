@@ -1,0 +1,11 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New Author and Body</h2>  
+    <form method="POST" action="insert">
+      <label> Author </label><input type="text" name="Author" /><br />
+      <label> Body </label><textarea name = "body"></textarea><br />
+      <input type="submit" value="Submit" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}

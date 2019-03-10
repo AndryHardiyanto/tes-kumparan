@@ -1,0 +1,12 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit Author and Body</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .ID }}" />
+      <label> Author </label><input type="text" name="Author" value="{{ .Author }}"  /><br />
+      <label> Body </label><textarea  name="body" value="{{ .Body }}" >{{ .Body }}</textarea> <br/>
+      <input type="submit" value="Edit" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}
