@@ -320,7 +320,7 @@ func Index(w http.ResponseWriter, r *http.Request) {
     w.Header().Set("Content-Type", "application/json")
     
     json.NewEncoder(w).Encode(res)
-   getElastic()
+  // getElastic()
     jsonWriter := ioutil.WriteFile("Get.json",rankingsJson ,0777)
        if jsonWriter != nil {
         fmt.Println(jsonWriter)
